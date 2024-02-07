@@ -5,12 +5,12 @@
 <h1 align="center">Gopher</h1>
 <p align="center">Cross-Platform Desktop Password Manager built using Electron</p>
 
-## Download
-Get the latest binary for your platform from [here](https://github.com/HusnainTaj/Gopher/releases/latest)
+<h2 align="center">Download</h2>
+<p align="center">Get the latest binary for your platform from <a href="https://github.com/HusnainTaj/Gopher/releases/latest">here</a></p>
+<p align="center">Find your OS specific executable and run it. E.g. <code>gopher.exe</code> from <code>gopher-win-x32</code> for Windows.</p>
 
-Find your OS specific executable and run it. E.g. 'gopher.exe' from 'gopher-win-x32' for Windows.
 
-## Screenshots
+<h2 align="center">Screenshots</h2>
 
 ![Home Screen](https://github.com/HusnainTaj/Gopher/assets/85726252/ce96da73-1f39-43c4-9015-7684cf8d51a2)
 
