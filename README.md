@@ -3,7 +3,12 @@
 </p>
 
 <h1 align="center">Gopher</h1>
-<p align="center">Cross-Platform Desktop Password Manager built using Electron.</p>
+<p align="center">Cross-Platform Desktop Password Manager built using Electron</p>
+
+## Download
+Get the latest binary for your platform from [here](https://github.com/HusnainTaj/Gopher/releases/latest)
+
+Find your OS specific executable and run it. E.g. 'gopher.exe' from 'gopher-win-x32' for Windows.
 
 ## Screenshots
 
