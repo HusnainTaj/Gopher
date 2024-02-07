@@ -3,4 +3,7 @@
 </p>
 
 <h1 align="center">Gopher</h1>
-Cross-Platform Desktop Password Manager
+<p align="center">Cross-Platform Desktop Password Manager built using Electron.</p>
+
+## Development
+
