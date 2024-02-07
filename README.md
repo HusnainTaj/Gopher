@@ -5,5 +5,14 @@
 <h1 align="center">Gopher</h1>
 <p align="center">Cross-Platform Desktop Password Manager built using Electron.</p>
 
-## Development
+## Screenshots
 
+![Home Screen](https://github.com/HusnainTaj/Gopher/assets/85726252/ce96da73-1f39-43c4-9015-7684cf8d51a2)
+
+![Credential Manager](https://github.com/HusnainTaj/Gopher/assets/85726252/d7ac0404-f5db-4b09-806e-652157889950)
+
+![Add Credential Screen](https://github.com/HusnainTaj/Gopher/assets/85726252/69f191e2-3e3f-4666-b731-a767e5a80cc4)
+
+![Search Credential Screen](https://github.com/HusnainTaj/Gopher/assets/85726252/f8c9e43b-632a-409e-ba43-54d842dffa2f)
+
+![Credential](https://github.com/HusnainTaj/Gopher/assets/85726252/0a1d2bdf-fa22-406a-9c0c-c1fe1e95da11)
