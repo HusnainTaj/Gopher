@@ -1,0 +1,24 @@
+{
+  "name": "gopher",
+  "productName": "Gopher",
+  "version": "1.0.0",
+  "description": "Personal Assistant",
+  "main": "app.js",
+  "scripts": {
+    "run": "electron .",
+    "rebuild": "electron-rebuild -f -w sqlite3",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . gopher --overwrite --asar=true --platform=win32 --arch=ia32 --icon=icons/win/Gopher-Icon.png.ico --prune=true --out=release-builds --version-string.CompanyName=Perspective-V --version-string.FileDescription=CE --version-string.ProductName=\"Gopher\"",
+    "package-linux": "electron-packager . gopher --overwrite --asar=true --platform=linux --arch=x64 --icon=icons/png/512x512.png --prune=true --out=release-builds"
+  },
+  "author": "Husnain Taj",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "electron": "^2.0.8",
+    "electron-packager": "^12.1.1",
+    "electron-rebuild": "^1.8.2"
+  }
+}

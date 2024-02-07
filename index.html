@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Gopher</title>
+	<link rel="stylesheet" href="css/uikit.min.css" />
+	<link rel="stylesheet" href="css/all.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div id="title-bar">
+		<div id="bar">
+			<ul id="nav" class="uk-breadcrumb">
+				<li data-name="GOPHER"><a href="#" data-to-page-id="#home-page" onclick="navChangePage(this.getAttribute('data-to-page-id'), this)">GOPHER</a></li>
+			</ul>
+			<div style="display: flex;">
+				<button id="minimize-btn" class="nav-btn"><svg name="TitleBarMinimize" width="12" height="12" viewBox="0 0 12 12"><rect fill="#ffffff" width="10" height="1" x="1" y="6"></rect></svg></button>
+				<button id="exit-btn" class="nav-btn"><svg name="TitleBarClose" width="12" height="12" viewBox="0 0 12 12"><polygon fill="#ffffff" fill-rule="evenodd" points="11 1.576 6.583 6 11 10.424 10.424 11 6 6.583 1.576 11 1 10.424 5.417 6 1 1.576 1.576 1 6 5.417 10.424 1"></polygon></svg></button>
+			</div>
+		</div>
+		<div id="loading-screen">
+			<div uk-spinner="ratio: 6" style="margin-bottom: 20px"></div>
+			<span>FINDING THE RIGHT SWITCH . . .</span>
+		</div>
+	</div>
+
+	<div>
+		<div id="home-page" class="page" data-name="GOPHER">
+			<div class="header">
+				<img src="icons/png/96x96.png" style="margin-top: 10px">
+				<h1 class="white" style="border-bottom: 2px solid white;padding: 10px;margin-top: 5px;">GOPHER</h1>
+			</div>
+			<div class="content">
+				<div id="cdm-btn" class="home-btn" onclick="changePage('#home-page','#cdm-main-page')">
+					<div><i class="fas fa-key fa-4x white"></i></div>
+					<span>Credential Manager</span>
+				</div>
+
+				<div id="coming-soon-btn" class="home-btn" style="cursor: wait;">
+					<div><i class="fas fa-smile-wink fa-4x white"></i></div>
+					<span>More Coming Soon!</span>
+				</div>
+			</div>
+		</div>
+
+		<div id="cdm-main-page" class="uk-hidden cont page" data-name="CREDENTIAL MANAGER" style="justify-content: space-around;flex-direction: column">
+			<h2 class="white" style="border-bottom: 2px solid white;padding: 10px;">CREDENTIAL MANAGER</h2>
+			<div style="margin-bottom: 50px">
+				<div>
+					<i class="fas fa-plus fa-6x white"></i>
+					<button id="cd-add-btn" class="uk-button uk-button-default uk-button-main" onclick="changePage('#cdm-main-page', '#cdm-add-page')">Add Credential</button>
+				</div>
+				<div>
+					<i class="fas fa-search fa-6x white"></i>
+					<button id="cd-search-btn" class="uk-button uk-button-default uk-button-main" onclick="changePage('#cdm-main-page', '#cdm-search-page')">Search Credential</button>
+				</div>
+			</div>
+
+		</div>
+
+		<div id="cdm-add-page" class="uk-hidden cont page" data-name="ADD CREDENTIAL">
+			<h2 class="white" style="border-bottom: 2px solid white;padding: 10px;">ADD NEW CREDENTIAL</h2>
+			<form>
+				<div style="display: flex;align-items: center">
+					<span class="white" style="margin-right: 15px;">SELECT ESP</span>
+					<div>
+						<button id="email-select-btn" class="uk-button uk-button-default uk-button-main" type="button">Custom</button>
+						<div id="email-select" uk-dropdown="mode: click" style="padding: 5px 25px 6px;">
+							<ul class="uk-nav uk-dropdown-nav">
+
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="icon-input">
+					<i class="fa fa-envelope white"></i>
+					<input id="cdm-add-email" class="uk-input" type="email" placeholder="Email">
+				</div>
+				<div class="icon-input">
+					<i class="fa fa-lock white"></i>
+					<input id="cdm-add-pass" class="uk-input" type="password" placeholder="Password">
+				</div>
+				<div class="icon-input">
+					<i class="fas fa-globe white"></i>
+					<input id="cdm-add-website" class="uk-input" type="url" placeholder="Website">
+				</div>
+
+				<div style="display: flex;justify-content: center;margin-top: 30px;">
+					<input id="cdm-add-btn" class="uk-button uk-button-default uk-button-main" type="button" value="ADD">
+				</div>
+			</form>
+			<div class="uk-alert-danger error" style="opacity: 0;" uk-alert>
+				<p style="padding: 0 50px 0 50px;">Make Sure All The Fields Aren't Empty!</p>
+			</div>
+		</div>
+
+		<div id="cdm-search-page" data-name="SEARCH CREDENTIAL" class="uk-hidden cont page">
+			<h2 class="white" style="border-bottom: 2px solid white;padding: 10px;margin: 25px 0;">SEARCH CREDENTIALS</h2>
+
+			<div class="content">
+				<div id="cdm-search-page-search-cd">
+					<div class="uk-inline">
+						<input id="cdm-cd-search-input" class="uk-input uk-form-small" type="text" placeholder="Search...">
+						<span class="uk-form-icon uk-form-icon-flip"><i class="fas fa-search white"></i></span>
+					</div>
+					<span id="cdm-total-cds" class="uk-text-small"></span>
+				</div>
+				<table class="uk-table uk-table-hover uk-table-divider uk-table-middle">
+					<thead>
+					<tr>
+						<th class="uk-table-shrink"><i class="fas fa-hashtag"></i></th>
+						<th>Website<i class="fas fa-globe" style="margin-left: 10px;"></i></th>
+						<th class="uk-width-medium">Actions</th>
+					</tr>
+					</thead>
+					<tbody id="cdm-c-table-body">
+
+					</tbody>
+				</table>
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+
+		<div id="cdm-add-esp-modal" style="background: transparent" uk-modal>
+			<div class="uk-modal-dialog uk-margin-auto-vertical">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+					<h3 class="">ADD NEW ESP</h3>
+				</div>
+				<div class="uk-modal-body" st>
+					<input id="cdm-esp-name" class="uk-input" type="text" placeholder="ESP Name">
+
+					<input id="cdm-esp-email" class="uk-input" type="email" placeholder="Email" style="margin-top: 20px">
+				</div>
+				<div class="uk-modal-footer">
+					<span class="uk-text-danger error" style="line-height: 2.5;opacity:0;">Make Sure Email & Password Fields Aren't Empty!</span>
+					<button id="cdm-esp-add-btn" class="uk-button uk-button-primary uk-float-right" type="button">ADD</button>
+				</div>
+			</div>
+		</div>
+
+		<div id="cdm-view-cd-modal" style="background: transparent" uk-modal>
+			<div class="uk-modal-dialog uk-margin-auto-vertical">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<div class="uk-modal-header">
+					<h3 class="">CREDENTIAL DETAILS</h3>
+				</div>
+				<div class="uk-modal-body" st>
+
+				</div>
+				<div class="uk-modal-footer uk-text-right">
+					<button class="uk-button uk-button-default uk-modal-close" type="button">CLOSE</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <script>
+	    // You can also require other files to run in this process
+	    let $ = require('jquery');
+	    let jQuery = require('jquery');
+	    let fs = require("fs");
+	    const remote = require('electron').remote;
+	    $("#exit-btn").click(()=>{remote.getCurrentWindow().close()});
+	    $("#minimize-btn").click(()=>{remote.getCurrentWindow().minimize()});
+
+	    require('./js/renderer.js');
+    </script>
+	<script src="js/uikit.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
