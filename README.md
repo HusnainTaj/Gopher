@@ -5,7 +5,7 @@
 <h1 align="center">Gopher</h1>
 <p align="center" >Cross-Platform Desktop Password Manager built using Electron</p>
 
-<h2 align="center">Important</h2>
+<h2 align="center">⚠️ Important ⚠️</h2>
 <p align="center" >This app was a hobby project made for learning Electron <br/> The passwords are not encrypted and simply stored in <code>data.json</code> inside the installation directory</p>
 
 <h2 align="center">Download</h2>
